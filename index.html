@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Step Counter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>🚶 Step Counter</h1>
+
+      <div class="progress-ring">
+        <svg viewBox="0 0 200 200">
+          <circle class="progress-bg" cx="100" cy="100" r="85" />
+          <circle class="progress-bar" id="progressCircle" cx="100" cy="100" r="85" />
+        </svg>
+        <div class="progress-text">
+          <span id="stepCount">0</span>
+          <small>steps</small>
+        </div>
+      </div>
+
+      <div class="goal-info">
+        <span>Goal: <strong id="goalDisplay">10,000</strong> steps</span>
+        <span id="percentageDisplay">0%</span>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-minus" id="decrementBtn" title="Decrease by 100">−100</button>
+        <button class="btn btn-primary" id="addBtn" title="Add a step">+1</button>
+        <button class="btn btn-plus" id="addTenBtn" title="Add 10 steps">+10</button>
+        <button class="btn btn-reset" id="resetBtn" title="Reset steps">↺</button>
+      </div>
+
+      <div class="goal-controls">
+        <label for="goalInput">Daily Goal:</label>
+        <div class="goal-input-group">
+          <input type="number" id="goalInput" value="10000" min="100" step="500" />
+          <button class="btn btn-set" id="setGoalBtn">Set</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
